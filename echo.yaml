@@ -44,9 +44,11 @@ metadata:
   name: echoserver
   namespace: echoserver
   annotations:
+    #maybe change this to nginx or your ingress config
     kubernetes.io/ingress.class: "haproxy-interno"
 spec:
   rules:
+  #remember to change this host for your case
   - host: myhost.com
     http:
       paths:
